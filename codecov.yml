@@ -1,0 +1,3 @@
+codecov:
+  token: f6e76e41-3a99-461b-a470-5c754e6fcdcb
+  fixes: "test/*::after.test.ts/"

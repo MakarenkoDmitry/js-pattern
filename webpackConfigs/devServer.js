@@ -4,7 +4,7 @@ module.exports = function () {
             contentBase: './dist',
             hot: true,
             historyApiFallback: true,
-            port: 8001
+            port: 8081
         }
     });
 };

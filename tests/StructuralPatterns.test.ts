@@ -36,7 +36,7 @@ describe("Structural Patterns Test", () => {
     });
     it("Composite pattern", () => {
         const notebook = new Notebook();
-        const device = new Processor(1500);
+        const device = new Processor();
         notebook
             .add(new Processor(2000))
             .add(new Memory(500))
@@ -44,6 +44,6 @@ describe("Structural Patterns Test", () => {
         expect(notebook.getName()).equal("Notebook");
         expect(device.getName()).equal("Processor");
         expect(notebook.getPrice()).equal(3500);
-        expect(device.getPrice()).equal(1500);
+        expect(device.getPrice()).equal(0);
     });
 });

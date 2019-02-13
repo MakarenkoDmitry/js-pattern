@@ -1,7 +1,7 @@
 import { Device } from "./";
 
 export class Processor extends Device {
-    constructor(price) {
+    constructor(price?: number) {
         super();
         this.setName("Processor");
         this.price = price;

@@ -1,5 +1,9 @@
 import { expect } from "chai";
-import { MainScreen, User, UserFactory, AbstractFactory, WinFactory, MacFactory, Director, PC } from "../src/CreationalPatterns/";
+import { MainScreen } from "../src/CreationalPatterns/Prototype";
+import { User } from "../src/CreationalPatterns/Singleton";
+import { UserFactory } from "../src/CreationalPatterns/Factory";
+import { AbstractFactory, WinFactory, MacFactory } from "../src/CreationalPatterns/Abstract Factory";
+import { Director, PC } from "../src/CreationalPatterns/Builder";
 
 describe("Creactional Patterns Test", () => {
     it("Prototype pattern", () => {

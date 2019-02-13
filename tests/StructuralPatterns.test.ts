@@ -1,5 +1,7 @@
 import { expect } from "chai";
-import { SearchText, SearchTextAdapter, Heading, Color } from "../src/StructuralPatterns/";
+import { SearchText, SearchTextAdapter } from "../src/StructuralPatterns/Adapter";
+import { Heading, Color } from "../src/StructuralPatterns/Bridge";
+import { Processor, Memory, HardDrive, Notebook } from "../src/StructuralPatterns/Composite";
 
 describe("Structural Patterns Test", () => {
     it("Adapter pattern", () => {
@@ -31,5 +33,17 @@ describe("Structural Patterns Test", () => {
         expect(component2.style.color).equal(whiteColor.getColor());
         expect(component1.textContent).equal(text1);
         expect(component2.textContent).equal(text2);
+    });
+    it("Composite pattern", () => {
+        const notebook = new Notebook();
+        const device = new Processor(1500);
+        notebook
+            .add(new Processor(2000))
+            .add(new Memory(500))
+            .add(new HardDrive(1000));
+        expect(notebook.getName()).equal("Notebook");
+        expect(device.getName()).equal("Processor");
+        expect(notebook.getPrice()).equal(3500);
+        expect(device.getPrice()).equal(1500);
     });
 });
